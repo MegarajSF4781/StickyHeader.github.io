@@ -93,7 +93,7 @@ var tree = new ej.treegrid.TreeGrid({
     dataSource: sampleData,
     childMapping: 'subtasks',
 
-    // allowPaging: true,
+    allowPaging: true,
     pageSettings: { pageSize: 10 },
     treeColumnIndex: 1,
     allowResizing: true,
