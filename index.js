@@ -111,7 +111,7 @@ var tree = new ej.treegrid.TreeGrid({
         'PdfExport', 'ExcelExport', 'CsvExport', 'FirstPage', 'PrevPage',
         'LastPage', 'NextPage', 'Indent', 'Outdent'],
 
-    frozenRows: 2,
+    frozenColumns:1,
     columns: [
         { field: 'taskID', headerText: 'Task ID', width: 70, textAlign: 'Right', isPrimaryKey: true },
         { field: 'taskName', headerText: 'Task Name', width: 200, textAlign: 'Left' },
@@ -156,7 +156,7 @@ var tree2 = new ej.treegrid.TreeGrid({
         'PdfExport', 'ExcelExport', 'CsvExport', 'FirstPage', 'PrevPage',
         'LastPage', 'NextPage', 'Indent', 'Outdent'],
 
-    frozenRows: 2,
+    frozenColumns:1,
     columns: [
         { field: 'taskID', headerText: 'Task ID', width: 70, textAlign: 'Right', isPrimaryKey: true },
         { field: 'taskName', headerText: 'Task Name', width: 200, textAlign: 'Left' },
@@ -172,8 +172,7 @@ tree2.appendTo('#TreeGrid2');
 var tree3 = new ej.treegrid.TreeGrid({
     dataSource: sampleData,
     childMapping: 'subtasks',
-    height:400,
-    // allowPaging: true,
+    allowPaging: true,
     pageSettings: { pageSize: 20 },
     treeColumnIndex: 1,
     allowResizing: true,
@@ -191,7 +190,7 @@ var tree3 = new ej.treegrid.TreeGrid({
         'PdfExport', 'ExcelExport', 'CsvExport', 'FirstPage', 'PrevPage',
         'LastPage', 'NextPage', 'Indent', 'Outdent'],
 
-    frozenRows: 2,
+    frozenColumns:1,
     columns: [
         { field: 'taskID', headerText: 'Task ID', width: 70, textAlign: 'Right', isPrimaryKey: true },
         { field: 'taskName', headerText: 'Task Name', width: 200, textAlign: 'Left' },
