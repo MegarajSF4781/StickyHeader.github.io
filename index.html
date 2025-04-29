@@ -34,7 +34,7 @@
         .empty-div {
             background-color: rgb(240, 237, 237);
             font-size: large;
-            align-content:end; 
+            align-content: end;
             text-align: center;
             font-family: Arial, Helvetica, sans-serif;
         }
@@ -55,7 +55,7 @@
 
 
 
-        #sticky {
+        .evtbtn {
             position: fixed;
             top: 100px;
 
@@ -64,6 +64,11 @@
             margin-right: 10px;
 
         }
+
+        .btn {
+            display: block;
+        }
+
 
         .body {
             /* grid-area: body; */
@@ -81,15 +86,16 @@
 <body>
 
     <section class="layout">
-       
+
         <div class="sidebar">
             <div class="evtbtn" style="padding-bottom: 10px">
-                <button id="sticky">Enable Or Disable Sticky</button>
+                <button id="sticky" class="btn">Enable Sticky</button>
+                <button id="sticky2" class="btn">Disable Sticky</button>
             </div>
         </div>
         <div class="body">
             <div id="container">
-                <div class="empty-div" >
+                <div class="empty-div">
                     <b>Treegrid(Top)</b>
                 </div>
                 <div id="TreeGrid"></div>
@@ -103,7 +109,7 @@
                 <div id="TreeGrid3"></div>
             </div>
         </div>
-        
+
     </section>
     <script src="index.js" type="text/javascript"></script>
 </body>

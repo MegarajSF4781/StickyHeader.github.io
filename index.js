@@ -122,16 +122,7 @@ var tree = new ej.treegrid.TreeGrid({
     ]
 });
 tree.appendTo('#TreeGrid');
-let select = new ej.buttons.Button();
-select.appendTo('#sticky');
-let a = 1;
-document.getElementById('sticky').onclick = () => {
 
-    tree.enableStickyHeader = tree.enableStickyHeader === true ? false : true;
-    tree2.enableStickyHeader = tree2.enableStickyHeader === true ? false : true;
-    tree3.enableStickyHeader = tree3.enableStickyHeader === true ? false : true;
-
-}
 
 var tree2 = new ej.treegrid.TreeGrid({
     dataSource: sampleData,
@@ -200,3 +191,29 @@ var tree3 = new ej.treegrid.TreeGrid({
 });
 
 tree3.appendTo('#TreeGrid3');
+let select = new ej.buttons.Button();
+select.appendTo('#sticky');
+let a = 1;
+if (a === 1) {
+    document.getElementById('sticky').disabled = true;
+}
+
+document.getElementById('sticky').onclick = () => {
+    tree.enableStickyHeader = true;
+    tree2.enableStickyHeader = true;
+    tree3.enableStickyHeader = true;
+    document.getElementById('sticky').disabled = true;
+    document.getElementById('sticky2').disabled = false
+    a += 1
+}
+
+let select2 = new ej.buttons.Button();
+select2.appendTo('#sticky2');
+document.getElementById('sticky2').onclick = () => {
+    tree.enableStickyHeader = false;
+    tree2.enableStickyHeader = false;
+    tree3.enableStickyHeader = false;
+    document.getElementById('sticky2').disabled = true;
+    document.getElementById('sticky').disabled = false;
+    a += 1
+}
